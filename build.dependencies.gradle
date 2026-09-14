@@ -1,17 +1,29 @@
 repositories {
     mavenCentral()
+    maven { url = 'https://maven.brott.dev/' }
+    // ftcontrol
+    maven {url = 'https://mymaven.bylazar.com/releases' }
     google() // Needed for androidx
 }
 
 dependencies {
     implementation 'org.firstinspires.ftc:Inspection:12.0.0'
     implementation 'org.firstinspires.ftc:Blocks:12.0.0'
+    //noinspection Aligned16KB
     implementation 'org.firstinspires.ftc:RobotCore:12.0.0'
     implementation 'org.firstinspires.ftc:RobotServer:12.0.0'
     implementation 'org.firstinspires.ftc:OnBotJava:12.0.0'
     implementation 'org.firstinspires.ftc:Hardware:12.0.0'
     implementation 'org.firstinspires.ftc:FtcCommon:12.0.0'
     implementation 'org.firstinspires.ftc:Vision:12.0.0'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.appcompat:appcompat:1.8.0'
+    implementation 'com.acmerobotics.dashboard:dashboard:0.4.16'
+    implementation 'org.ftclib.ftclib:core:2.1.1' // Adds FTCLib GamepadEx, Drive bases, and Motors
+    // This is for FTControl
+    implementation 'com.bylazar:fullpanels:1.0.12'
+    implementation 'com.bylazar:graph:1.0.4'
+    implementation 'com.bylazar:capture:1.0.3'
+    implementation "com.bylazar:configurables:1.0.5"
+    // Fix Duplicate class
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
 }
-
